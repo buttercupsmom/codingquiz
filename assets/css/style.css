@@ -1,0 +1,48 @@
+:root {
+  --hotpink: #d63384;
+  --lavender: #d0aef2;
+  --blush: #f5dff1;
+  --sage: #d4f0d3;
+  --lightblue: #99b6cf;
+  --sunlight: #ede9a4;
+  --chocolate: #3b3321;
+  --grey: #747578;
+  --mint: #6ef0d1;
+}
+
+/* Elements */
+button {
+  background-color: var(--blush);
+  color: var(--hotpink);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+section {
+  background-color: var(--lightblue);
+  color: var(--sunlight);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* ids */
+#highscore {
+  background-color: var(--lightblue);
+  color: var(--sunlight);
+  font-family: "Roboto Condensed", sans-serif;
+}
+/* classes */
+.border {
+  background-color: var(--blush);
+  color: var(--hotpink);
+  font-family: "Roboto Condensed", sans-serif;
+}
+.navbar {
+  background-color: var(--blush);
+  color: var(--hotpink);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.start-btn {
+  background-color: var(--lightblue);
+  color: var(--sunlight);
+  font-family: "Roboto Condensed", sans-serif;
+}
