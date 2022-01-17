@@ -11,38 +11,89 @@
 }
 
 /* Elements */
+body {
+  background-color: var(--chocolate);
+  color: var(--hotpink);
+  font-family: "Roboto Condensed", sans-serif;
+}
+
 button {
   background-color: var(--blush);
   color: var(--hotpink);
   font-family: "Roboto Condensed", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+
+header nav {
+  background-color: var(--blush);
+  border: 2px solid #d63384;
+  padding-top: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  margin-right: 9px;
+  text-align: center;
+}
+
+main {
+  width: 70%;
+  display: inline-block;
+  margin-left: 20px;
 }
 
 section {
-  background-color: var(--lightblue);
-  color: var(--sunlight);
-  font-family: "Roboto Condensed", sans-serif;
+  float: right;
+  margin: 10px;
+  padding: 0.5rem;
+  width: 200px;
+  text-align: center;
 }
 
-/* ids */
-#highscore {
-  background-color: var(--lightblue);
-  color: var(--sunlight);
-  font-family: "Roboto Condensed", sans-serif;
-}
 /* classes */
-.border {
+.high-scores-div {
   background-color: var(--blush);
-  color: var(--hotpink);
-  font-family: "Roboto Condensed", sans-serif;
-}
-.navbar {
-  background-color: var(--blush);
-  color: var(--hotpink);
-  font-family: "Roboto Condensed", sans-serif;
+  border: 2px solid #d63384;
+  float: right;
+  margin: 10px;
+  padding: 0.5rem;
+  width: 200px;
 }
 
-.start-btn {
-  background-color: var(--lightblue);
-  color: var(--sunlight);
-  font-family: "Roboto Condensed", sans-serif;
+/* #ids */
+#answers {
+  border: 2px solid;
+  font-size: 24px;
+  background-color: var(--blush);
+  color: var(--hotpink);
+}
+
+#high-scores {
+  border: 2px solid;
+  font-size: 24px;
+  background-color: var(--blush);
+  color: var(--hotpink);
+  text-align: center;
+}
+
+#question {
+  border: 2px solid;
+  font-size: 24px;
+  background-color: var(--blush);
+  color: var(--hotpink);
+  text-align: center;
+}
+
+#start {
+  border: 2px solid;
+  font-size: 24px;
+  background-color: var(--blush);
+  color: var(--hotpink);
+}
+
+#timer {
+  border: 2px solid;
+  font-size: 24px;
+  background-color: var(--blush);
+  color: var(--hotpink);
 }

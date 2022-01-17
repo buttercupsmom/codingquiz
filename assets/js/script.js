@@ -4,7 +4,6 @@ const questionDiv = document.getElementById("question");
 const answersDiv = document.getElementById("answers");
 const timerElement = document.getElementById("timer");
 const highScoreDiv = document.getElementById("high-scores");
-const restartButton = document.getElementById("restart-btn");
 const questions = [
   {
     title: "When is Buttercup's Birthday?",
@@ -39,7 +38,7 @@ let isWin = false;
 
 // Functions
 function startGame() {
-  timerCount = timerCount;
+  // timerCount = timerCount;
   answersDiv.textContent = " ";
   // Show first question with answers
   questionDiv.innerHTML = questions[qIndex].title;
@@ -63,15 +62,11 @@ function answerClick() {
     alert("You are correct!!");
     // Move to the next question or end the game.
     qIndex++;
-    if (questions.length > qIndex) {
-      startGame();
-    } else {
-      endGame();
-      stopGame();
-    }
+  }
+  if (questions.length > qIndex) {
+    startGame();
   } else {
-    // Let User know answer Incorrect
-    alert("Incorrect.");
+    endGame();
   }
 }
 
@@ -83,28 +78,20 @@ function endGame() {
 
 // Start Timer
 function startTimer() {
+  console.log("startTimer");
   startGame();
   timer = setInterval(function () {
+    if (isWin === true) {
+      clearInterval(timer);
+    }
+    console.log(timerCount);
     timerCount--;
     timerElement.textContent = timerCount;
-    if (timerCount >= 0) {
-      // Test if win condition is met
-      if (isWin && timerCount > 0) {
-        // Clears interval and stops timer
-        clearInterval(timer);
-        alert("100% You really know Buttercup! 🐶🥳");
-        endGame();
-      } else if (isWin && timerCount > 0) {
-        clearInterval(timer);
-        stopGame();
-      }
-    }
+
     // Test if time has run out
     if (timerCount <= 0) {
       clearInterval(timer);
       alert("You Lost, get to know Buttercup a little better! 🐶");
-      // stopGame();
-      stopGame();
     }
   }, 1000);
 }
@@ -121,6 +108,7 @@ function setsHighScore() {
       initials: initials,
       score: userScore,
     };
+    console.log(userScore);
     highScores.push(theScore);
     window.localStorage.setItem("high-scores", JSON.stringify(highScores));
   }
@@ -128,11 +116,6 @@ function setsHighScore() {
   highScores.forEach((score) => {
     highScoreDiv.innerHTML += `${score.initials}: ${score.score} <br>`;
   });
-}
-
-// Stop quiz by reload
-function stopGame() {
-  location.reload();
 }
 
 // Start Quiz
