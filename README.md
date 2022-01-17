@@ -19,5 +19,5 @@ How well do you know my Hound/Pittie Mix?
 
 ## Link to Repository
 
-- Here is the repo: []
-- Here are the pages: []
+- Here is the repo: [https://github.com/buttercupsmom/codingquiz]
+- Here are the pages: [https://buttercupsmom.github.io/codingquiz/]
